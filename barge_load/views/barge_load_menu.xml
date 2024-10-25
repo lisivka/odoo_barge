@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="barge_load_menu"
+              web_icon="barge_load,static/description/icon.png"
+              name="Barge load LSM" sequence="1"/>
+
+    <menuitem id="menu_captain" name="Captain"
+              parent="barge_load_menu"
+              sequence="10" action="action_captain"/>
+    <menuitem id="menu_barge" name="Barge"
+              parent="barge_load_menu"
+              sequence="20" action="action_barge"/>
+</odoo>

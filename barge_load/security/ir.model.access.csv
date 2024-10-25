@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_captain,captain access for user,model_barge_load_captain,base.group_user,1,1,1,1
+access_barge,barge access for user,model_barge_load_barge,base.group_user,1,1,1,1
+access_captain_manager,captain access for manager,model_barge_load_captain,base.group_system,1,1,1,1

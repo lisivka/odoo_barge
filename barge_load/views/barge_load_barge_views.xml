@@ -1,0 +1,43 @@
+<odoo>
+    <!-- View for List -->
+    <record id="view_barge_tree" model="ir.ui.view">
+        <field name="name">barge.load.barge.tree</field>
+        <field name="model">barge.load.barge</field>
+        <field name="arch" type="xml">
+            <tree string="Barges">
+                <field name="name"/>
+                <field name="owner_id" required="1"/>
+                <field name="captain_id" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View for Form -->
+    <record id="view_barge_form" model="ir.ui.view">
+        <field name="name">barge.load.barge.form</field>
+        <field name="model">barge.load.barge</field>
+        <field name="arch" type="xml">
+            <form string="Barge Information">
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="owner_id" required="1"/>
+                        <field name="captain_id" required="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Barges -->
+    <record id="action_barge" model="ir.actions.act_window">
+        <field name="name">Barges</field>
+        <field name="res_model">barge.load.barge</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the barge information here.
+            </p>
+        </field>
+    </record>
+</odoo>
