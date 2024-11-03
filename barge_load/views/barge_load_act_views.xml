@@ -1,0 +1,204 @@
+<odoo>
+
+    <record id="view_act_tree" model="ir.ui.view">
+        <field name="name">barge.load.act.tree</field>
+        <field name="model">barge.load.act</field>
+        <field name="arch" type="xml">
+            <tree string="Barges">
+                <field name="number"/>
+                <field name="date"/>
+                <field name="quarry_id"/>
+                <field name="dredger_id"/>
+
+                <field name="barge_id"/>
+                <field name="tugboat_id"/>
+
+
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="duration" widget="float_time"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_act_form" model="ir.ui.view">
+        <field name="name">barge.load.act.form</field>
+        <field name="model">barge.load.act</field>
+        <field name="arch" type="xml">
+
+            <form string="Act Information">
+                <header>
+                    <group>
+                        <field name="status" widget="statusbar"
+                               options="{'clickable': '1'}"/>
+                    </group>
+                </header>
+
+                <sheet>
+                    <group col="2">
+                        <group>
+                            <field name="number"/>
+                            <field name="date"/>
+                            <field name="quarry_id"/>
+                            <field name="receiver_id"/>
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                            <field name="duration" widget="float_time"/>
+
+                        </group>
+                        <group>
+                            <field name="dredger_id"/>
+                            <field name="dredger_agent_id"/>
+                            <field name="barge_id"/>
+                            <field name="tugboat_id"/>
+                            <field name="tugboat_agent_id"/>
+                            <field name="cargo_carrier_id"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Ship's draft">
+                            <group col="3">
+
+                                <!-- Table Before -->
+                                <group string="Before loading, cm">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 80px;">Draft</th>
+                                                <th style="width: 60px;">T nose</th>
+                                                <th style="width: 60px;">T mid</th>
+                                                <th style="width: 60px;">T stern</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Left</td>
+                                                <td>
+                                                    <field name="before_left_nose" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="before_left_mid" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="before_left_stern" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Right</td>
+                                                <td>
+                                                    <field name="before_right_nose" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="before_right_mid" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="before_right_stern" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>T_avg</td>
+                                                <td>
+                                                    <field name="before_avg_draft"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </group>
+
+                                <!-- Table After -->
+                                <group string="After loading, cm">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 80px;">Draft</th>
+                                                <th style="width: 60px;">T nose</th>
+                                                <th style="width: 60px;">T mid</th>
+                                                <th style="width: 60px;">T stern</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Left</td>
+                                                <td>
+                                                    <field name="after_left_nose" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="after_left_mid" widget="integer" style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="after_left_stern" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Right</td>
+                                                <td>
+                                                    <field name="after_right_nose" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="after_right_mid" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                                <td>
+                                                    <field name="after_right_stern" widget="integer"
+                                                           style="width: 60px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>T_avg</td>
+                                                <td colspan="1">
+                                                    <field name="after_avg_draft" style="width: 60px;"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </group>
+
+                                <!-- Calculation -->
+                                <group>
+                                    <field name="draft_difference"/>
+                                    <field name="cargo_capacity_per_cm"/>
+                                    <field name="calculated_weight" widget="float"/>
+                                    <field name="moisture_coefficient" widget="percent"/>
+                                    <field name="record_weight" widget="float"/>
+                                </group>
+
+                            </group>
+                        </page>
+                    </notebook>
+
+
+                </sheet>
+
+                <!-- Chatter for messages -->
+                <div class="oe_chatter">
+                    <field name="message_ids"
+                           widget="mail_thread"/>
+                </div>
+
+            </form>
+
+        </field>
+    </record>
+
+    <record id="action_act" model="ir.actions.act_window">
+        <field name="name">acts</field>
+        <field name="res_model">barge.load.act</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the barge load act here.
+            </p>
+        </field>
+    </record>
+</odoo>
