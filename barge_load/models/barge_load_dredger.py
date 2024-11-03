@@ -9,6 +9,7 @@ class Dredger(models.Model):
     _name = 'barge.load.dredger'
     _description = 'Dredger Information'
 
-    name = fields.Char(required=True)
-    owner_id = fields.Many2one('res.partner', required=True)
-    captain_id = fields.Many2one('captain', required=True)
+    name = fields.Char()
+    owner_id = fields.Many2one('res.partner')
+
+

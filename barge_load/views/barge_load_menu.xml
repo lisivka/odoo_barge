@@ -1,13 +1,28 @@
 <odoo>
     <!-- Main Menu -->
-    <menuitem id="barge_load_menu"
+    <menuitem id="lb_main_menu"
               web_icon="barge_load,static/description/icon.png"
               name="Barge load LSM" sequence="1"/>
 
-    <menuitem id="menu_captain" name="Captain"
-              parent="barge_load_menu"
-              sequence="10" action="action_captain"/>
+
+    <menuitem id="menu_act" name="Act"
+              parent="lb_main_menu"
+              sequence="5" action="action_act"/>
+
+    <menuitem id="menu_tugboat" name="Tugboat"
+              parent="lb_main_menu"
+              sequence="10" action="action_tugboat"/>
+
     <menuitem id="menu_barge" name="Barge"
-              parent="barge_load_menu"
+              parent="lb_main_menu"
               sequence="20" action="action_barge"/>
+
+    <menuitem id="menu_dredger" name="Dredger"
+              parent="lb_main_menu"
+              sequence="30" action="action_dredger"/>
+
+<!--    <menuitem id="menu_quarry" name="Quarry"-->
+<!--              parent="lb_main_menu"-->
+<!--              sequence="40" action="action_dredger"/>-->
+
 </odoo>

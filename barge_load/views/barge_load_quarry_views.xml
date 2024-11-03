@@ -1,0 +1,40 @@
+<odoo>
+
+    <record id="view_quarry_tree" model="ir.ui.view">
+        <field name="name">barge.load.quarry.tree</field>
+        <field name="model">barge.load.quarry</field>
+        <field name="arch" type="xml">
+            <tree string="Quarry">
+                <field name="name"/>
+                <field name="owner_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_quarry_form" model="ir.ui.view">
+        <field name="name">barge.load.quarry.form</field>
+        <field name="model">barge.load.quarry</field>
+        <field name="arch" type="xml">
+            <form string="Quarry Information">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="owner_id" />
+<!--                        <field name="location"/>-->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_quarry" model="ir.actions.act_window">
+        <field name="name">Quarry</field>
+        <field name="res_model">barge.load.quarry</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the quarry information here.
+            </p>
+        </field>
+    </record>
+</odoo>

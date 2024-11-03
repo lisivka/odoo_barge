@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- View for List -->
+
     <record id="view_captain_tree" model="ir.ui.view">
         <field name="name">barge.load.captain.tree</field>
         <field name="model">barge.load.captain</field>
         <field name="arch" type="xml">
             <tree string="Captains">
-                <field name="partner_id"/>
+                <field name="name"/>
                 <field name="license_number"/>
             </tree>
         </field>
     </record>
 
-    <!-- View for Form -->
+
     <record id="view_captain_form" model="ir.ui.view">
         <field name="name">barge.load.captain.form</field>
         <field name="model">barge.load.captain</field>
@@ -28,7 +28,7 @@
         </field>
     </record>
 
-    <!-- Action for opening the Captains views -->
+
     <record id="action_captain" model="ir.actions.act_window">
         <field name="name">Captains</field>
         <field name="res_model">barge.load.captain</field>
@@ -40,8 +40,4 @@
         </field>
     </record>
 
-    <!-- Menu Item for Captains -->
-    <menuitem id="menu_captain_root" name="Captains" sequence="10"/>
-    <menuitem id="menu_captain" name="Captains" parent="menu_captain_root"
-              action="action_captain" sequence="10"/>
 </odoo>
