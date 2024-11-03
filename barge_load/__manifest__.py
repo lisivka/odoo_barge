@@ -17,13 +17,13 @@ var = {
     },
 
     'data': [
-        'security/ir.model.access.csv',
-        'views/barge_load_quarry_views.xml',
-        'views/barge_load_barge_views.xml',
-        'views/barge_load_dredger_views.xml',
-        'views/barge_load_tugboat_views.xml',
-        'views/barge_load_act_views.xml',
-        'views/barge_load_menu.xml',  # Завантажується останнім
+        # 'security/ir.model.access.csv',
+        # 'views/barge_load_quarry_views.xml',
+        # 'views/barge_load_barge_views.xml',
+        # 'views/barge_load_dredger_views.xml',
+        # 'views/barge_load_tugboat_views.xml',
+        # 'views/barge_load_act_views.xml',
+        # 'views/barge_load_menu.xml',  # Завантажується останнім
     ],
 
     'demo': [
