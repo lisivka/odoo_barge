@@ -18,9 +18,9 @@
             <form string="Barge Information">
                 <sheet>
                     <group>
-                        <field name="name" required="1"/>
-                        <field name="owner_id" required="1"/>
-                        <field name="cargo_capacity_per_cm" required="1"/>
+                        <field name="name"/>
+                        <field name="owner_id"/>
+                        <field name="cargo_capacity_per_cm"/>
                     </group>
                 </sheet>
             </form>

@@ -4,19 +4,28 @@
         <field name="name">barge.load.act.tree</field>
         <field name="model">barge.load.act</field>
         <field name="arch" type="xml">
-            <tree string="Barges">
+            <tree string="Barges" decoration-success="status == 'done'" decoration-warning="status == 'draft'">
                 <field name="number"/>
                 <field name="date"/>
-                <field name="quarry_id"/>
-                <field name="dredger_id"/>
 
-                <field name="barge_id"/>
-                <field name="tugboat_id"/>
+                <field name="owner_quarry_id" optional="show"/>
+                <field name="receiver_id" optional="show"/>
+                <field name="quarry_id" optional="show"/>
+                <field name="dredger_id" optional="show"/>
+
+                <field name="barge_id" optional="show"/>
+                <field name="tugboat_id" optional="show"/>
 
 
-                <field name="start_time"/>
-                <field name="end_time"/>
-                <field name="duration" widget="float_time"/>
+                <field name="start_time" optional="show"/>
+                <field name="end_time" optional="show"/>
+                <field name="duration" widget="float_time" optional="show"/>
+                                <field name="draft_difference" optional="hide"/>
+                <field name="cargo_capacity_per_cm"/>
+                <field name="calculated_weight" optional="hide"/>
+                <field name="moisture_coefficient" optional="hide"/>
+                <field name="record_weight" widget="float"/>
+                <field name="status" widget="statusbar" optional="show"/>
 
             </tree>
         </field>
@@ -41,6 +50,7 @@
                             <field name="number"/>
                             <field name="date"/>
                             <field name="quarry_id"/>
+                            <field name="owner_quarry_id"/>
                             <field name="receiver_id"/>
                             <field name="start_time"/>
                             <field name="end_time"/>
@@ -168,9 +178,9 @@
                                 <group>
                                     <field name="draft_difference"/>
                                     <field name="cargo_capacity_per_cm"/>
-                                    <field name="calculated_weight" widget="float"/>
-                                    <field name="moisture_coefficient" widget="percent"/>
-                                    <field name="record_weight" widget="float"/>
+                                    <field name="calculated_weight"/>
+                                    <field name="moisture_coefficient"/>
+                                    <field name="record_weight"/>
                                 </group>
 
                             </group>
@@ -191,10 +201,78 @@
         </field>
     </record>
 
+    <record id="view_act_search" model="ir.ui.view">
+        <field name="name">barge.load.act.search</field>
+        <field name="model">barge.load.act</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="filter_status" string="Status"
+                        domain="[('status', '!=', False)]"
+                        context="{'group_by': 'status'}"/>
+                <filter name="filter_quarry" string="Quarry"
+                        domain="[('quarry_id', '!=', False)]"
+                        context="{'group_by': 'quarry_id'}"/>
+                <filter name="filter_receiver" string="Receiver"
+                        domain="[('receiver_id', '!=', False)]"
+                        context="{'group_by': 'receiver_id'}"/>
+                <filter name="filter_barge" string="Barge"
+                        domain="[('barge_id', '!=', False)]"
+                        context="{'group_by': 'barge_id'}"/>
+                <filter name="filter_tugboat" string="Tugboat"
+                        domain="[('tugboat_id', '!=', False)]"
+                        context="{'group_by': 'tugboat_id'}"/>
+                <filter name="filter_date" string="Date"
+                        domain="[('date', '!=', False)]"
+                        context="{'group_by': 'date'}"/>
+                <separator/>
+
+                <filter name="filter_date" date="date" default_period="this_month"/>
+                <filter name="filter_order_date" invisible="0" string="Last 30 Days"
+                        domain="[('date', '&gt;=', (datetime.datetime.combine(context_today() + relativedelta(days=-30), datetime.time(0,0,0))).strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                <filter name="filter_order_date" invisible="0" string="Last 7 Days"
+                        domain="[('date', '&gt;=', (datetime.datetime.combine(context_today() + relativedelta(days=-7), datetime.time(0,0,0))).strftime('%Y-%m-%d %H:%M:%S'))]"/>
+                <separator/>
+
+            </search>
+        </field>
+    </record>
+
+    <record id="view_barge_load_act_calendar" model="ir.ui.view">
+        <field name="name">barge.load.act.calendar</field>
+        <field name="model">barge.load.act</field>
+        <field name="arch" type="xml">
+            <calendar string="Barge Loading Calendar" date_start="date" date_stop="date" color="status">
+                <field name="number"/>
+                <field name="quarry_id"/>
+                <field name="receiver_id"/>
+                <field name="barge_id"/>
+                <field name="tugboat_id"/>
+                <field name="status"/>
+                <field name="record_weight"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_barge_load_act_pivot" model="ir.ui.view">
+        <field name="name">barge.load.act.pivot</field>
+        <field name="model">barge.load.act</field>
+        <field name="arch" type="xml">
+            <pivot string="Barge Loading Pivot">
+                <field name="quarry_id" type="row"/>
+
+                <field name="receiver_id" type="row"/>
+                <field name="status" type="col"/>
+                <field name="date" type="col"/>
+                <field name="record_weight" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+
     <record id="action_act" model="ir.actions.act_window">
-        <field name="name">acts</field>
+        <field name="name">Acts</field>
         <field name="res_model">barge.load.act</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar,pivot</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create the barge load act here.

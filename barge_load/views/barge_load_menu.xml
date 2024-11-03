@@ -21,8 +21,8 @@
               parent="lb_main_menu"
               sequence="30" action="action_dredger"/>
 
-<!--    <menuitem id="menu_quarry" name="Quarry"-->
-<!--              parent="lb_main_menu"-->
-<!--              sequence="40" action="action_dredger"/>-->
+    <menuitem id="menu_quarry" name="Quarry"
+              parent="lb_main_menu"
+              sequence="40" action="action_quarry"/>
 
 </odoo>
