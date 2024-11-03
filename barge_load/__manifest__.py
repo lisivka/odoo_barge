@@ -23,10 +23,13 @@
         'views/barge_load_dredger_views.xml',
         'views/barge_load_tugboat_views.xml',
         'views/barge_load_act_views.xml',
-        'views/barge_load_menu.xml',   # Завантажується останнім
+        'views/barge_load_menu.xml',  # Завантажується останнім
     ],
 
     'demo': [
+
+        "demo/barge_load_demo.xml",
+        "demo/barge_load_demo_act.xml"
     ],
 
     'installable': True,

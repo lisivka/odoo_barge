@@ -1,0 +1,73 @@
+<odoo>
+    <!--  Act -->
+    <record id="barge_loading_act_1" model="barge.load.act">
+        <field name="number">1</field>
+        <field name="date"
+               eval="(DateTime.now() - timedelta(days=9)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="start_time"
+               eval="(DateTime.now() - timedelta(days=9, hours=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="end_time"
+               eval="(DateTime.now() - timedelta(days=9)).strftime('%Y-%m-%d %H:%M:%S')"/>
+
+        <field name="quarry_id" ref="quarry_1"/>
+        <field name="owner_quarry_id">9</field>
+        <field name="receiver_id">13</field>
+        <field name="dredger_agent_id">21</field>
+        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_id" ref="dredger_1"/>
+        <field name="barge_id" ref="barge_1"/>
+        <field name="tugboat_id" ref="tugboat_1"/>
+        <field name="cargo_carrier_id">15</field>
+        <field name="status">done</field>
+
+        <field name="before_left_nose">70</field>
+        <field name="before_left_mid">70</field>
+        <field name="before_left_stern">70</field>
+        <field name="before_right_nose">70</field>
+        <field name="before_right_mid">70</field>
+        <field name="before_right_stern">70</field>
+
+        <field name="after_left_nose">150</field>
+        <field name="after_left_mid">150</field>
+        <field name="after_left_stern">150</field>
+        <field name="after_right_nose">150</field>
+        <field name="after_right_mid">150</field>
+        <field name="after_right_stern">150</field>
+    </record>
+
+    <record id="barge_loading_act_2" model="barge.load.act">
+        <field name="number">2</field>
+        <field name="date"
+               eval="(DateTime.now() - timedelta(days=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="start_time"
+               eval="(DateTime.now() - timedelta(days=8, hours=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="end_time"
+               eval="(DateTime.now() - timedelta(days=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="quarry_id" ref="quarry_3"/>
+        <field name="owner_quarry_id">13</field>
+        <field name="receiver_id">13</field>
+        <field name="dredger_agent_id">21</field>
+        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_id" ref="dredger_2"/>
+        <field name="barge_id" ref="barge_2"/>
+        <field name="tugboat_id" ref="tugboat_2"/>
+        <field name="cargo_carrier_id">15</field>
+        <field name="status">done</field>
+
+        <field name="before_left_nose">80</field>
+        <field name="before_left_mid">80</field>
+        <field name="before_left_stern">80</field>
+        <field name="before_right_nose">80</field>
+        <field name="before_right_mid">80</field>
+        <field name="before_right_stern">80</field>
+
+        <field name="after_left_nose">150</field>
+        <field name="after_left_mid">150</field>
+        <field name="after_left_stern">150</field>
+        <field name="after_right_nose">150</field>
+        <field name="after_right_mid">150</field>
+        <field name="after_right_stern">150</field>
+    </record>
+
+
+</odoo>

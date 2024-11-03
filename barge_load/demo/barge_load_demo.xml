@@ -1,0 +1,146 @@
+<odoo>
+    <!-- Barge -->
+
+    <record id="barge_1" model="barge.load.barge">
+        <field name="name">Barge Alpha</field>
+        <field name="owner_id">9</field>
+        <field name="cargo_capacity_per_cm">10.5</field>
+    </record>
+
+    <record id="barge_2" model="barge.load.barge">
+        <field name="name">Barge Beta</field>
+        <field name="owner_id">15</field>
+        <field name="cargo_capacity_per_cm">12.3</field>
+    </record>
+
+    <record id="barge_3" model="barge.load.barge">
+        <field name="name">Barge P-702</field>
+        <field name="owner_id">13</field>
+        <field name="cargo_capacity_per_cm">8.7</field>
+    </record>
+    <record id="barge_4" model="barge.load.barge">
+        <field name="name">Barge P-703</field>
+        <field name="owner_id">13</field>
+        <field name="cargo_capacity_per_cm">9.5</field>
+    </record>
+
+    <!--  Dredger  -->
+
+    <record id="dredger_1" model="barge.load.dredger">
+        <field name="name">Sahara</field>
+        <field name="owner_id">9</field>
+    </record>
+
+    <record id="dredger_2" model="barge.load.dredger">
+        <field name="name">Gobi</field>
+        <field name="owner_id">9</field>
+    </record>
+
+    <record id="dredger_3" model="barge.load.dredger">
+        <field name="name">Kalahari</field>
+        <field name="owner_id">13</field>
+    </record>
+
+    <record id="dredger_4" model="barge.load.dredger">
+        <field name="name">Atacama</field>
+        <field name="owner_id">15</field>
+    </record>
+
+    <record id="dredger_5" model="barge.load.dredger">
+        <field name="name">Namib</field>
+        <field name="owner_id">15</field>
+    </record>
+
+    <!--  Quarry -->
+
+    <record id="quarry_1" model="barge.load.quarry">
+        <field name="name">Indus River</field>
+        <field name="owner_id">9</field>
+        <field name="location">Pakistan</field>
+    </record>
+
+    <record id="quarry_2" model="barge.load.quarry">
+        <field name="name">Nile River</field>
+        <field name="owner_id">9</field>
+        <field name="location">Africa</field>
+    </record>
+
+    <record id="quarry_3" model="barge.load.quarry">
+        <field name="name">Yangtze River</field>
+        <field name="owner_id">13</field>
+        <field name="location">China</field>
+    </record>
+
+    <record id="quarry_4" model="barge.load.quarry">
+        <field name="name">Mississippi River</field>
+        <field name="owner_id">13</field>
+        <field name="location">USA</field>
+    </record>
+
+    <record id="quarry_5" model="barge.load.quarry">
+        <field name="name">Ganges River</field>
+        <field name="owner_id">15</field>
+        <field name="location">India</field>
+    </record>
+
+    <record id="quarry_6" model="barge.load.quarry">
+        <field name="name">Danube River</field>
+        <field name="owner_id">15</field>
+        <field name="location">Europe</field>
+    </record>
+
+
+    <!--  Tugboat -->
+
+    <record id="tugboat_1" model="barge.load.tugboat">
+        <field name="name">Santa Maria</field>
+        <field name="owner_id">9</field>
+    </record>
+
+    <record id="tugboat_2" model="barge.load.tugboat">
+        <field name="name">HMS Victory</field>
+        <field name="owner_id">9</field>
+    </record>
+
+    <record id="tugboat_3" model="barge.load.tugboat">
+        <field name="name">USS Constitution</field>
+        <field name="owner_id">9</field>
+    </record>
+
+    <record id="tugboat_4" model="barge.load.tugboat">
+        <field name="name">Bounty</field>
+        <field name="owner_id">13</field>
+    </record>
+
+    <record id="tugboat_5" model="barge.load.tugboat">
+        <field name="name">Nina</field>
+        <field name="owner_id">13</field>
+    </record>
+
+    <record id="tugboat_6" model="barge.load.tugboat">
+        <field name="name">Pinta</field>
+        <field name="owner_id">13</field>
+    </record>
+
+    <record id="tugboat_7" model="barge.load.tugboat">
+        <field name="name">Endeavour</field>
+        <field name="owner_id">15</field>
+    </record>
+
+    <record id="tugboat_8" model="barge.load.tugboat">
+        <field name="name">Mayflower</field>
+        <field name="owner_id">15</field>
+    </record>
+
+    <record id="tugboat_9" model="barge.load.tugboat">
+        <field name="name">Fjord</field>
+        <field name="owner_id">15</field>
+    </record>
+
+    <record id="tugboat_10" model="barge.load.tugboat">
+        <field name="name">Cutty Sark</field>
+        <field name="owner_id">15</field>
+    </record>
+
+
+</odoo>
