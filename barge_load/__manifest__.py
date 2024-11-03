@@ -1,5 +1,5 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
-var = {
+{
     'name': 'Barge Load',
     'author': 'Lisivka Sergii',
     'category': 'Customizations',
@@ -17,13 +17,13 @@ var = {
     },
 
     'data': [
-        # 'security/ir.model.access.csv',
-        # 'views/barge_load_quarry_views.xml',
-        # 'views/barge_load_barge_views.xml',
-        # 'views/barge_load_dredger_views.xml',
-        # 'views/barge_load_tugboat_views.xml',
-        # 'views/barge_load_act_views.xml',
-        # 'views/barge_load_menu.xml',  # Завантажується останнім
+        'security/ir.model.access.csv',
+        'views/barge_load_quarry_views.xml',
+        'views/barge_load_barge_views.xml',
+        'views/barge_load_dredger_views.xml',
+        'views/barge_load_tugboat_views.xml',
+        'views/barge_load_act_views.xml',
+        'views/barge_load_menu.xml',   # Завантажується останнім
     ],
 
     'demo': [
