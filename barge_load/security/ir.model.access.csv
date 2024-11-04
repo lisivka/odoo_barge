@@ -4,3 +4,4 @@ access_dredger,barge access for user,model_barge_load_dredger,base.group_user,1,
 access_barge,barge access for user,model_barge_load_barge,base.group_user,1,1,1,1
 access_tugboat,tugboat access for manager,model_barge_load_tugboat,base.group_system,1,1,1,1
 access_act,act access for user,model_barge_load_act,base.group_user,1,1,1,1
+access_mass_update_act_wizard,mass.update.act.wizard,model_mass_update_act_wizard,base.group_user,1,1,1,1

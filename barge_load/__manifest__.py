@@ -23,6 +23,9 @@
         'views/barge_load_dredger_views.xml',
         'views/barge_load_tugboat_views.xml',
         'views/barge_load_act_views.xml',
+
+        'wizards/mass_update_doctor_wizard_views.xml',
+
         'views/barge_load_menu.xml',  # Завантажується останнім
     ],
 
