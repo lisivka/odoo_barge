@@ -268,11 +268,26 @@
         </field>
     </record>
 
+    <record id="view_barge_load_act_graph" model="ir.ui.view">
+    <field name="name">barge.load.act.graph</field>
+    <field name="model">barge.load.act</field>
+    <field name="arch" type="xml">
+        <graph string="Barge Load Act - Monthly Record Weight" type="bar">
+
+            <field name="date" interval="month" type="col"/>
+            <field name="quarry_id" type="col"/>
+            <field name="record_weight" type="measure"/>
+
+        </graph>
+    </field>
+</record>
+
+
 
     <record id="action_act" model="ir.actions.act_window">
         <field name="name">Acts</field>
         <field name="res_model">barge.load.act</field>
-        <field name="view_mode">tree,form,calendar,pivot</field>
+        <field name="view_mode">tree,form,calendar,pivot,graph</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create the barge load act here.
