@@ -11,5 +11,9 @@ class Dredger(models.Model):
 
     name = fields.Char()
     owner_id = fields.Many2one('res.partner')
+    act_ids = fields.One2many('barge.load.act',
+                                'quarry_id',
+                                )
+
 
 

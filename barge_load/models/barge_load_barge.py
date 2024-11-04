@@ -17,3 +17,6 @@ class Barge(models.Model):
              "(as per registration documents or calibration certificate)",
         digits=(7, 3),
     )
+    act_ids = fields.One2many('barge.load.act',
+                                'quarry_id',
+                                )

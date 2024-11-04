@@ -1,0 +1,26 @@
+<odoo>
+    <!-- Дія для звіту кар'єру -->
+    <report
+        id="report_quarry_loading_acts"
+        model="barge.load.quarry"
+        string="Quarry Loading Acts Report"
+        report_type="qweb-pdf"
+        name="barge_load.report_quarry_loading_acts_template"
+        file="barge_load.report_quarry_loading_acts_template"
+        attachment_use="False"
+    />
+
+    <!-- Меню для звіту -->
+    <menuitem
+        id="menu_quarry_reports"
+        name="Quarry Reports"
+        parent="barge_load.menu_barge_load_root"
+    />
+
+    <menuitem
+        id="menu_quarry_loading_acts_report"
+        name="Loading Acts Report"
+        parent="menu_quarry_reports"
+        action="report_quarry_loading_acts"
+    />
+</odoo>

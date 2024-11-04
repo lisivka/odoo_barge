@@ -50,7 +50,7 @@ class BargeLoadingAct(models.Model):
     end_time = fields.Datetime(copy=False, tracking=True)
     duration = fields.Float(
         compute="_compute_duration",
-        string="Loading Duration (h)",
+        string="Duration (h)",
     )
 
     # ----- START ship`s draft
@@ -131,7 +131,7 @@ class BargeLoadingAct(models.Model):
     record_weight = fields.Float(
         compute="_compute_record_weight",
         string="Record Weight (t)",
-        help="Record Weight of Water-Saturated Sand (t)",
+        help="Record Weight without Water (t)",
         digits=(6, 3),
         store=True,
         tracking=True
@@ -225,8 +225,7 @@ class BargeLoadingAct(models.Model):
     last_7_days_date = fields.Date(compute='_compute_dates', store=False)
     last_30_days_date = fields.Date(compute='_compute_dates', store=False)
 
-    @api.depends(
-        'date')  # Залежність на випадок, якщо вам потрібно буде оновити ці поля
+    @api.depends('date')
     def _compute_dates(self):
         for record in self:
             record.last_7_days_date = (

@@ -12,5 +12,7 @@ class Quarry(models.Model):
     name = fields.Char()
     owner_id = fields.Many2one('res.partner' )
     location = fields.Char()
-
+    act_ids = fields.One2many('barge.load.act',
+                                'quarry_id',
+                                )
 

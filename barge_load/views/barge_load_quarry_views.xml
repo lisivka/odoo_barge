@@ -18,10 +18,17 @@
             <form string="Quarry Information">
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="owner_id" />
-<!--                        <field name="location"/>-->
+                        <field name="name"/>
+                        <field name="owner_id"/>
+                        <field name="location"/>
                     </group>
+                    <notebook>
+                        <page string="Acts">
+                            <field name="act_ids" widget="one2many_list"
+                                   readonly="1"
+                                   domain="[    ('quarry_id', '=', id),                ]"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
