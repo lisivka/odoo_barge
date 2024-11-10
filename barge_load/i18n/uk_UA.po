@@ -1,0 +1,850 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* barge_load
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-10 16:49+0000\n"
+"PO-Revision-Date: 2024-11-10 16:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: barge_load
+#: model:ir.actions.report,print_report_name:barge_load.action_report_barge_load_act
+msgid "'Act Report - ' + object.number"
+msgstr "'Акт навантаження - ' + object.number"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Barge:</strong>"
+msgstr "</strong>Баржа:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Calculated Weight:</strong>"
+msgstr "<strong>Розрахована вага:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Cargo Capacity per cm:</strong>"
+msgstr "<strong>Вантажопідйомність т на см:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Cargo Carrier:</strong>"
+msgstr "<strong>Вантажоперевізник:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Draft Difference:</strong>"
+msgstr "<strong>Різниця осадок:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Dredger Agent:</strong>"
+msgstr "<strong>Агент земснаряду:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Dredger:</strong>"
+msgstr "<strong>Земснаряд:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Duration:</strong>"
+msgstr "<strong>Тривалість:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>End Time:</strong>"
+msgstr "<strong>Кінець:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Moisture Coefficient:</strong>"
+msgstr "<strong>Коефіцієнт вологості:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Owner:</strong>"
+msgstr "<strong>Власник:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Quarry:</strong>"
+msgstr "<strong>Кар'єр:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Receiver:</strong>"
+msgstr "<strong>Отримувач:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Recorded Weight:</strong>"
+msgstr "<strong>Залікова вага:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Start Time:</strong>"
+msgstr "<strong>Початок:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Status:</strong>"
+msgstr "<strong>Статус:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Tugboat Agent:</strong>"
+msgstr "<strong>Агент буксиру:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>Tugboat:</strong>"
+msgstr "<strong>Буксир:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>______________________________________ Dredger Agent:</strong>"
+msgstr "<strong>______________________________________ Агент земснаряду:</strong>"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "<strong>______________________________________ Tugboat Agent:</strong>"
+msgstr "<strong>______________________________________ Агент буксиру:</strong>"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__act_ids
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__act_ids
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__act_ids
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__act_ids
+#: model:ir.ui.menu,name:barge_load.menu_act
+msgid "Act"
+msgstr "Акт"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "Act Information"
+msgstr "Інформація про акт"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_needaction
+msgid "Action Needed"
+msgstr "Потрібна дія"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_act
+#: model_terms:ir.ui.view,arch_db:barge_load.view_barge_form
+#: model_terms:ir.ui.view,arch_db:barge_load.view_dredger_form
+#: model_terms:ir.ui.view,arch_db:barge_load.view_quarry_form
+#: model_terms:ir.ui.view,arch_db:barge_load.view_tugboat_form
+msgid "Acts"
+msgstr "Акти"
+
+#. module: barge_load
+#: model:res.groups,name:barge_load.group_admin
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#. module: barge_load
+#: model:res.groups,comment:barge_load.group_admin
+msgid "Administrators with full rights"
+msgstr "Адміністратори з повними правами"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_avg_draft
+msgid "After Avg Draft (cm)"
+msgstr "Осодка після (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_left_mid
+msgid "After Left Mid (cm)"
+msgstr "Лівий середина після (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_left_nose
+msgid "After Left Nose (cm)"
+msgstr "Лівий ніс після (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_left_stern
+msgid "After Left Stern (cm)"
+msgstr "Лівий корма після (см)"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "After Loading (cm)"
+msgstr "Після завантаження (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_right_mid
+msgid "After Right Mid (cm)"
+msgstr "Правий середина після (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_right_nose
+msgid "After Right Nose (cm)"
+msgstr "Правий ніс після (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__after_right_stern
+msgid "After Right Stern (cm)"
+msgstr "Правий корма після (см)"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "After loading, cm"
+msgstr "Після завантаження, см"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_agent
+#: model:ir.ui.menu,name:barge_load.menu_agent
+#: model:res.groups,name:barge_load.group_agent
+#: model_terms:ir.ui.view,arch_db:barge_load.view_agent_tree
+msgid "Agent"
+msgstr "Агент"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_agent_form
+msgid "Agent Information"
+msgstr "Інформація про агента"
+
+#. module: barge_load
+#: model:res.groups,comment:barge_load.group_agent
+msgid "Agents with access to their own records"
+msgstr "Агенти з доступом до своїх записів"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_mass_update_act_wizard
+msgid "Apply"
+msgstr "Застосувати"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_attachment_count
+msgid "Attachment Count"
+msgstr "Кількість прикріплень"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__cargo_capacity_per_cm
+msgid "Average Cargo Capacity per cm"
+msgstr "Середній об'єм грузу на см"
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_barge__cargo_capacity_per_cm
+msgid ""
+"Average Cargo Capacity per cm (as per registration documents or calibration "
+"certificate)"
+msgstr ""
+"Середній об'єм грузу на см (як у реєстраційних документах або сертифікатів "
+"калібрування)"
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__cargo_capacity_per_cm
+msgid ""
+"Average Cargo Capacity ton per cm (as per registration documents or "
+"calibration certificate)"
+msgstr ""
+"Середній об'єм грузу тон на см (як у реєстраційних документах або сертифікатів"
+"калібрування)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__barge_id
+#: model:ir.ui.menu,name:barge_load.menu_barge
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Barge"
+msgstr "Баржа"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_barge_load_barge
+#: model_terms:ir.ui.view,arch_db:barge_load.view_barge_form
+msgid "Barge Information"
+msgstr "Інформація про баржу"
+
+#. module: barge_load
+#: model:ir.module.category,name:barge_load.category_barge_load
+msgid "Barge Load"
+msgstr "Завантаження баржи"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_barge_load_act_graph
+msgid "Barge Load Act - Monthly Record Weight"
+msgstr "Завантаження баржи - Місячний запис ваги"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_barge_load_act
+msgid "Barge Loading Act"
+msgstr "Завантаження баржи"
+
+#. module: barge_load
+#: model:ir.actions.report,name:barge_load.action_report_barge_load_act
+msgid "Barge Loading Act Report"
+msgstr "Звіт про завантаження баржи"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "Barge Loading Act Report Act #"
+msgstr "Звіт про завантаження баржи No"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_barge_load_act_calendar
+msgid "Barge Loading Calendar"
+msgstr "Календар завантаження баржи"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_barge_load_act_pivot
+msgid "Barge Loading Pivot"
+msgstr "Завантаження баржи - Зведена таблиця"
+
+#. module: barge_load
+#: model:ir.ui.menu,name:barge_load.lb_main_menu
+msgid "Barge load LSM"
+msgstr "Завантаження баржи LSM"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_barge
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_tree
+#: model_terms:ir.ui.view,arch_db:barge_load.view_barge_tree
+msgid "Barges"
+msgstr "Баржи"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_avg_draft
+msgid "Before Avg Draft (cm)"
+msgstr "Осадка перед (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_left_mid
+msgid "Before Left Mid (cm)"
+msgstr "Лівий середина перед (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_left_nose
+msgid "Before Left Nose (cm)"
+msgstr "Лівий ніс перед (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_left_stern
+msgid "Before Left Stern (cm)"
+msgstr "Лівий корма перед (см)"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "Before Loading (cm)"
+msgstr "Перед завантаженням (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_right_mid
+msgid "Before Right Mid (cm)"
+msgstr "Права середина перед (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_right_nose
+msgid "Before Right Nose (cm)"
+msgstr "Правий ніс перед (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__before_right_stern
+msgid "Before Right Stern (cm)"
+msgstr "Правий корма перед (см)"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "Before loading, cm"
+msgstr "Перед завантаженням, см"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__calculated_weight
+msgid "Calculated Weight (t)"
+msgstr "Розрахована вага (т)"
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__calculated_weight
+msgid "Calculated Weight of Water-Saturated Sand (t)"
+msgstr "Розрахована вага насиченого водою піску (т)"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "Calculation"
+msgstr "Розрахунок"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_mass_update_act_wizard
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__cargo_capacity_per_cm
+msgid "Capacity (t/cm)"
+msgstr "Вантажопідйомність (т/см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__cargo_carrier_id
+msgid "Cargo Carrier"
+msgstr "Вантажоперевізник"
+
+#. module: barge_load
+#: model_terms:ir.actions.act_window,help:barge_load.action_agent
+msgid "Create the agent information here."
+msgstr "Створити інформацію про агента"
+
+#. module: barge_load
+#: model_terms:ir.actions.act_window,help:barge_load.action_barge
+msgid "Create the barge information here."
+msgstr "Створити інформацію про баржу"
+
+#. module: barge_load
+#: model_terms:ir.actions.act_window,help:barge_load.action_act
+msgid "Create the barge load act here."
+msgstr "Створити інформацію про завантаження баржи"
+
+#. module: barge_load
+#: model_terms:ir.actions.act_window,help:barge_load.action_dredger
+msgid "Create the dredger information here."
+msgstr "Створити інформацію про земснаряд"
+
+#. module: barge_load
+#: model_terms:ir.actions.act_window,help:barge_load.action_quarry
+msgid "Create the quarry information here."
+msgstr "Створити інформацію про карьер"
+
+#. module: barge_load
+#: model_terms:ir.actions.act_window,help:barge_load.action_tugboat
+msgid "Create the tugboat information here."
+msgstr "Створити інформацію про буксир"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__create_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__create_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__create_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__create_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__create_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__create_uid
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__create_uid
+msgid "Created by"
+msgstr "Створено"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__create_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__create_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__create_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__create_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__create_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__create_date
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__create_date
+msgid "Created on"
+msgstr "Створено на"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__date
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Date"
+msgstr "Дата"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__draft_difference
+msgid "Difference of Average Draft Before and After Loading (cm)"
+msgstr "Різниця середнього висоти перед і після завантаження (см)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__display_name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__display_name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__display_name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__display_name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__display_name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__display_name
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__display_name
+msgid "Display Name"
+msgstr "Назва"
+
+#. module: barge_load
+#: model:ir.model.fields.selection,name:barge_load.selection__barge_load_act__status__done
+#: model:ir.model.fields.selection,name:barge_load.selection__mass_update_act_wizard__new_status__done
+msgid "Done"
+msgstr "Завершено"
+
+#. module: barge_load
+#: model:ir.model.fields.selection,name:barge_load.selection__barge_load_act__status__draft
+#: model:ir.model.fields.selection,name:barge_load.selection__mass_update_act_wizard__new_status__draft
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "Draft"
+msgstr "Чорновик"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_dredger
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__dredger_id
+#: model:ir.ui.menu,name:barge_load.menu_dredger
+#: model_terms:ir.ui.view,arch_db:barge_load.view_dredger_tree
+msgid "Dredger"
+msgstr "Земснаряд"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_barge_load_agent
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__dredger_agent_id
+msgid "Dredger Agent"
+msgstr "Агент земснаряду"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_barge_load_dredger
+#: model_terms:ir.ui.view,arch_db:barge_load.view_dredger_form
+msgid "Dredger Information"
+msgstr "Інформація про земснаряд"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__duration
+msgid "Duration (h)"
+msgstr "Тривалість (год.)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__end_time
+msgid "End Time"
+msgstr "Час закінчення"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_follower_ids
+msgid "Followers"
+msgstr "Підписники"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Підписники (партнери)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__has_message
+msgid "Has Message"
+msgstr "Має повідомлення"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__id
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Last 30 Days"
+msgstr "Останні 30 днів"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__last_30_days_date
+msgid "Last 30 Days Date"
+msgstr "Останні 30 днів"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Last 7 Days"
+msgstr "Останні 7 днів"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__last_7_days_date
+msgid "Last 7 Days Date"
+msgstr "Останні 7 днів"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__write_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__write_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__write_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__write_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__write_uid
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__write_uid
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Останнє оновлення"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__write_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__write_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__write_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__write_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__write_date
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__write_date
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "Left"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__location
+msgid "Location"
+msgstr "Місцезнаходження"
+
+#. module: barge_load
+#: model:res.groups,name:barge_load.group_manager
+msgid "Manager"
+msgstr "Менеджер"
+
+#. module: barge_load
+#: model:res.groups,comment:barge_load.group_manager
+msgid "Managers with full access to all acts"
+msgstr "Менеджери з повним доступом до всіх актів"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_mass_update_act_wizard
+#: model:ir.actions.server,name:barge_load.action_mass_update_act
+#: model_terms:ir.ui.view,arch_db:barge_load.view_mass_update_act_wizard
+msgid "Mass Update Act Status"
+msgstr "Масове оновлення статусу актів"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__moisture_coefficient
+msgid "Moisture Coefficient (%)"
+msgstr "Коефіцієнт вологості (%)"
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__moisture_coefficient
+msgid "Moisture Coefficient for Determining Recorded Weight (%)"
+msgstr "Коефіцієнт вологості для визначення залікової ваги (%)"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__name
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_mass_update_act_wizard__new_status
+msgid "New Status"
+msgstr "Новий статус"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__number
+msgid "Number"
+msgstr "Номер"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_barge__owner_id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_dredger__owner_id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_quarry__owner_id
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_tugboat__owner_id
+msgid "Owner"
+msgstr "Власник"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__owner_quarry_id
+msgid "Owner Quarry"
+msgstr "Власник карьеру"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__partner_id
+msgid "Partner"
+msgstr "Партнер"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_quarry
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__quarry_id
+#: model:ir.ui.menu,name:barge_load.menu_quarry
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+#: model_terms:ir.ui.view,arch_db:barge_load.view_quarry_tree
+msgid "Quarry"
+msgstr "Карьер"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_barge_load_quarry
+#: model_terms:ir.ui.view,arch_db:barge_load.view_quarry_form
+msgid "Quarry Information"
+msgstr "Інформація про карьер"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__receiver_id
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Receiver"
+msgstr "Отримувач"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__record_weight
+msgid "Record Weight (t)"
+msgstr "Залікова вага (т)"
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_act__record_weight
+msgid "Record Weight without Water (t)"
+msgstr "Залікова вага без води (т)"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "Right"
+msgstr ""
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "Ship's draft"
+msgstr "Осадка судна"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "Signature:"
+msgstr "Підпис:"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__start_time
+msgid "Start Time"
+msgstr "Час початку"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__status
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "T Mid"
+msgstr "Т сер."
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "T Nose"
+msgstr "Т ніс"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "T Stern"
+msgstr "Т корма"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "T mid"
+msgstr "Т сер."
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "T nose"
+msgstr "Т ніс"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "T stern"
+msgstr "Т корма"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_form
+msgid "T_avg"
+msgstr ""
+
+#. module: barge_load
+#: model:ir.model.fields,help:barge_load.field_barge_load_agent__user_id
+msgid "The user linked to this person."
+msgstr "Користувач, пов'язаний з цими особами."
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__tugboat_id
+#: model:ir.ui.menu,name:barge_load.menu_tugboat
+#: model_terms:ir.ui.view,arch_db:barge_load.view_act_search
+msgid "Tugboat"
+msgstr "Буксир"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_act__tugboat_agent_id
+msgid "Tugboat Agent"
+msgstr "Агент буксиру"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_barge_load_tugboat
+msgid "Tugboat Information"
+msgstr "Інформація про буксир"
+
+#. module: barge_load
+#: model:ir.model.fields,field_description:barge_load.field_barge_load_agent__user_id
+msgid "User"
+msgstr "Користувач"
+
+#. module: barge_load
+#: model:ir.module.category,description:barge_load.category_barge_load
+msgid "User access levels for Barge Load"
+msgstr "Рівні доступу користувачів для Barge Load"
+
+#. module: barge_load
+#: model:ir.model,name:barge_load.model_mass_update_act_wizard
+msgid "Wizard for Mass Update of Acts"
+msgstr "Помічник для масового оновлення актів"
+
+#. module: barge_load
+#. odoo-python
+#: code:addons/barge_load/models/barge_load_act.py:0
+#, python-format
+msgid "You cannot modify  act - the status is 'Done'."
+msgstr "Ви не можете змінити акт, оскільки його статус 'Завершено'."
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.report_barge_load_act_document
+msgid "dated"
+msgstr "дата"
+
+#. module: barge_load
+#: model:ir.actions.act_window,name:barge_load.action_tugboat
+#: model_terms:ir.ui.view,arch_db:barge_load.view_tugboat_tree
+msgid "tugboat"
+msgstr "буксир"
+
+#. module: barge_load
+#: model_terms:ir.ui.view,arch_db:barge_load.view_tugboat_form
+msgid "tugboat Information"
+msgstr "інформація про буксир"
