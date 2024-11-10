@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-       
 
-        <!-- Dregger aggent: можуть переглядати та редагувати свої записи -->
-        <record id="act_rule_agent" model="ir.rule">
-            <field name="name">Agent can view and edit their own records</field>
-            <field name="model_id" ref="barge_load.model_barge_load_act"/>
-            <field name="domain_force">['|',('dredger_agent_id.user_id', '=', user.id), ('tugboat_agent_id.user_id', '=', user.id)]</field>
-            <field name="groups" eval="[(4, ref('barge_load.group_agent'))]"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_unlink" eval="False"/>
-        </record>
+    <!-- Agent: можуть переглядати та редагувати свої записи -->
+    <record id="act_rule_agent" model="ir.rule">
+        <field name="name">Agent can view and edit their own records</field>
+        <field name="model_id" ref="barge_load.model_barge_load_act"/>
+        <field name="domain_force">['|', ('dredger_agent_id.user_id', '=', user.id),
+            ('tugboat_agent_id.user_id', '=',           user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('barge_load.group_agent'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
 
-        <!-- Менеджери: можуть переглядати усі записи -->
-        <record id="act_rule_manager" model="ir.rule">
-            <field name="name">Managers can view all records</field>
-            <field name="model_id" ref="barge_load.model_barge_load_act"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('barge_load.group_manager'))]"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_unlink" eval="False"/>
-        </record>
 
-        <!-- Адміністратори: можуть видаляти будь-які дані -->
-        <record id="act_rule_admin" model="ir.rule">
-            <field name="name">Administrators have full rights to delete any data</field>
-            <field name="model_id" ref="barge_load.model_barge_load_act"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('barge_load.group_admin'))]"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_unlink" eval="True"/>
-        </record>
+    <!-- Менеджери: можуть переглядати усі записи -->
+    <record id="act_rule_manager" model="ir.rule">
+        <field name="name">Managers can view all records</field>
+        <field name="model_id" ref="barge_load.model_barge_load_act"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('barge_load.group_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Адміністратори: можуть видаляти будь-які дані -->
+    <record id="act_rule_admin" model="ir.rule">
+        <field name="name">Administrators have full rights to delete any data</field>
+        <field name="model_id" ref="barge_load.model_barge_load_act"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('barge_load.group_admin'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
 
 </odoo>

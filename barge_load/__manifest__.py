@@ -17,8 +17,8 @@
     },
 
     'data': [
-        # 'security/barge_load_group.xml',
-        # 'security/barge_load_security.xml',
+        'security/barge_load_group.xml',
+        'security/barge_load_security.xml',
         'security/ir.model.access.csv',
         'views/barge_load_quarry_views.xml',
         'views/barge_load_barge_views.xml',
