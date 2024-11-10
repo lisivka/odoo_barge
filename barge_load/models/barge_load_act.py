@@ -22,9 +22,9 @@ class BargeLoadingAct(models.Model):
     receiver_id = fields.Many2one('res.partner', copy=False,
                                   tracking=True)
 
-    dredger_agent_id = fields.Many2one('res.partner', copy=False,
-                                       tracking=True)
-    tugboat_agent_id = fields.Many2one('res.partner', copy=False,
+    dredger_agent_id = fields.Many2one('barge.load.agent', copy=False,
+                                        tracking=True)
+    tugboat_agent_id = fields.Many2one('barge.load.agent', copy=False,
                                        tracking=True)
 
     dredger_id = fields.Many2one('barge.load.dredger', tracking=True)
@@ -57,30 +57,30 @@ class BargeLoadingAct(models.Model):
     before_left_nose = fields.Float(string="Before Left Nose (cm)",
                                     copy=False, tracking=True, )
     before_left_mid = fields.Float(string="Before Left Mid (cm)",
-                                    copy=False, tracking=True, )
+                                   copy=False, tracking=True, )
     before_left_stern = fields.Float(string="Before Left Stern (cm)",
-                                    copy=False, tracking=True, )
+                                     copy=False, tracking=True, )
 
     before_right_nose = fields.Float(string="Before Right Nose (cm)",
-                                    copy=False, tracking=True, )
+                                     copy=False, tracking=True, )
     before_right_mid = fields.Float(string="Before Right Mid (cm)",
                                     copy=False, tracking=True, )
     before_right_stern = fields.Float(string="Before Right Stern (cm)",
-                                    copy=False, tracking=True, )
+                                      copy=False, tracking=True, )
 
     after_left_nose = fields.Float(string="After Left Nose (cm)",
-                                    copy=False, tracking=True, )
+                                   copy=False, tracking=True, )
     after_left_mid = fields.Float(string="After Left Mid (cm)",
-                                    copy=False, tracking=True, )
+                                  copy=False, tracking=True, )
     after_left_stern = fields.Float(string="After Left Stern (cm)",
                                     copy=False, tracking=True, )
 
     after_right_nose = fields.Float(string="After Right Nose (cm)",
                                     copy=False, tracking=True, )
     after_right_mid = fields.Float(string="After Right Mid (cm)",
-                                    copy=False, tracking=True, )
+                                   copy=False, tracking=True, )
     after_right_stern = fields.Float(string="After Right Stern (cm)",
-                                    copy=False, tracking=True, )
+                                     copy=False, tracking=True, )
 
     before_avg_draft = fields.Float(
         compute="_compute_before_avg_draft",
@@ -104,8 +104,8 @@ class BargeLoadingAct(models.Model):
     # ----- START calculated weight
     cargo_capacity_per_cm = fields.Float(
         related='barge_id.cargo_capacity_per_cm',
-        string="Average Cargo Capacity per cm",
-        help="Average Cargo Capacity per cm "
+        string="Capacity (t/cm)",
+        help="Average Cargo Capacity ton per cm "
              "(as per registration documents or calibration certificate)",
         readonly=True,
         store=True,
@@ -229,11 +229,16 @@ class BargeLoadingAct(models.Model):
     def _compute_dates(self):
         for record in self:
             record.last_7_days_date = (
-                        datetime.now() - timedelta(days=7)).date()
+                    datetime.now() - timedelta(days=7)).date()
             record.last_30_days_date = (
-                        datetime.now() - timedelta(days=30)).date()
+                    datetime.now() - timedelta(days=30)).date()
 
     @api.model
     def default_get(self, fields):
         res = super(BargeLoadingAct, self).default_get(fields)
         return res
+
+    def print_barge_load_act_report(self):
+
+        return self.env.ref(
+            'barge_load.action_report_barge_load_act').report_action(self)

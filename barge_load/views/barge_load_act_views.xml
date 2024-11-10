@@ -4,7 +4,9 @@
         <field name="name">barge.load.act.tree</field>
         <field name="model">barge.load.act</field>
         <field name="arch" type="xml">
+
             <tree string="Barges" decoration-success="status == 'done'" decoration-warning="status == 'draft'">
+
                 <field name="number"/>
                 <field name="date"/>
 
@@ -12,15 +14,17 @@
                 <field name="receiver_id" optional="show"/>
                 <field name="quarry_id" optional="show"/>
                 <field name="dredger_id" optional="show"/>
+                <field name="dredger_agent_id" optional="show"/>
 
                 <field name="barge_id" optional="show"/>
                 <field name="tugboat_id" optional="show"/>
+                <field name="tugboat_agent_id" optional="show"/>
 
 
                 <field name="start_time" optional="show"/>
                 <field name="end_time" optional="show"/>
                 <field name="duration" widget="float_time" optional="show"/>
-                                <field name="draft_difference" optional="hide"/>
+                <field name="draft_difference" optional="hide"/>
                 <field name="cargo_capacity_per_cm"/>
                 <field name="calculated_weight" optional="hide"/>
                 <field name="moisture_coefficient" optional="hide"/>
@@ -269,19 +273,18 @@
     </record>
 
     <record id="view_barge_load_act_graph" model="ir.ui.view">
-    <field name="name">barge.load.act.graph</field>
-    <field name="model">barge.load.act</field>
-    <field name="arch" type="xml">
-        <graph string="Barge Load Act - Monthly Record Weight" type="bar">
+        <field name="name">barge.load.act.graph</field>
+        <field name="model">barge.load.act</field>
+        <field name="arch" type="xml">
+            <graph string="Barge Load Act - Monthly Record Weight" type="bar">
 
-            <field name="date" interval="month" type="col"/>
-            <field name="quarry_id" type="col"/>
-            <field name="record_weight" type="measure"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="quarry_id" type="col"/>
+                <field name="record_weight" type="measure"/>
 
-        </graph>
-    </field>
-</record>
-
+            </graph>
+        </field>
+    </record>
 
 
     <record id="action_act" model="ir.actions.act_window">

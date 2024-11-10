@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="category_barge_load" model="ir.module.category">
+            <field name="name">Barge Load</field>
+            <field name="description">User access levels for Barge Load</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <!-- Group Admin -->
+        <record id="group_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="category_barge_load"/>
+            <field name="comment">Administrators with full rights</field>
+        </record>
+
+        <!-- Group Manager that inherits from Group Admin -->
+        <record id="group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="category_barge_load"/>
+            <field name="implied_ids" eval="[(4, ref('barge_load.group_admin'))]"/>
+            <field name="comment">Managers with full access to all acts</field>
+        </record>
+
+        <!-- Group Dgedger Agent that inherits from Group Manager -->
+        <record id="group_dredger_agent" model="res.groups">
+            <field name="name">Dredger agent</field>
+            <field name="category_id" ref="category_barge_load"/>
+            <field name="implied_ids" eval="[(4, ref('barge_load.group_manager'))]"/>
+            <field name="comment">Dredger agents with access to their own records</field>
+        </record>
+
+</odoo>
