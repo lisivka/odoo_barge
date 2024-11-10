@@ -12,8 +12,8 @@
         <field name="quarry_id" ref="quarry_1"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">13</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_1"/>
+        <field name="tugboat_agent_id" ref="agent_2"/>
         <field name="dredger_id" ref="dredger_1"/>
         <field name="barge_id" ref="barge_1"/>
         <field name="tugboat_id" ref="tugboat_1"/>
@@ -46,8 +46,8 @@
         <field name="quarry_id" ref="quarry_3"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">13</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_3"/>
+        <field name="tugboat_agent_id" ref="agent_4"/>
         <field name="dredger_id" ref="dredger_2"/>
         <field name="barge_id" ref="barge_2"/>
         <field name="tugboat_id" ref="tugboat_2"/>
@@ -80,8 +80,8 @@
         <field name="quarry_id" ref="quarry_3"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">13</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_3"/>
+        <field name="tugboat_agent_id" ref="agent_4"/>
         <field name="dredger_id" ref="dredger_2"/>
         <field name="barge_id" ref="barge_2"/>
         <field name="tugboat_id" ref="tugboat_2"/>
@@ -115,8 +115,9 @@
         <field name="quarry_id" ref="quarry_1"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">13</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_1"/>
+        <field name="tugboat_agent_id" ref="agent_2"/>
+
         <field name="dredger_id" ref="dredger_1"/>
         <field name="barge_id" ref="barge_1"/>
         <field name="tugboat_id" ref="tugboat_1"/>
@@ -150,8 +151,9 @@
         <field name="quarry_id" ref="quarry_1"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">15</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_5"/>
+        <field name="tugboat_agent_id" ref="agent_6"/>
+
         <field name="dredger_id" ref="dredger_3"/>
         <field name="barge_id" ref="barge_3"/>
         <field name="tugboat_id" ref="tugboat_3"/>
@@ -185,8 +187,9 @@
         <field name="quarry_id" ref="quarry_1"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">15</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_5"/>
+        <field name="tugboat_agent_id" ref="agent_6"/>
+
         <field name="dredger_id" ref="dredger_3"/>
         <field name="barge_id" ref="barge_3"/>
         <field name="tugboat_id" ref="tugboat_3"/>
@@ -219,8 +222,9 @@
         <field name="quarry_id" ref="quarry_3"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">13</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_3"/>
+        <field name="tugboat_agent_id" ref="agent_4"/>
+
         <field name="dredger_id" ref="dredger_2"/>
         <field name="barge_id" ref="barge_2"/>
         <field name="tugboat_id" ref="tugboat_2"/>
@@ -253,8 +257,9 @@
         <field name="quarry_id" ref="quarry_3"/>
         <field name="owner_quarry_id">9</field>
         <field name="receiver_id">13</field>
-        <field name="dredger_agent_id">21</field>
-        <field name="tugboat_agent_id">22</field>
+        <field name="dredger_agent_id" ref="agent_3"/>
+        <field name="tugboat_agent_id" ref="agent_4"/>
+
         <field name="dredger_id" ref="dredger_2"/>
         <field name="barge_id" ref="barge_2"/>
         <field name="tugboat_id" ref="tugboat_2"/>

@@ -1,4 +1,29 @@
 <odoo>
+        <!-- Agent -->
+    <record id="agent_1" model="barge.load.agent">
+        <field name="partner_id">21</field>
+    </record>
+
+    <record id="agent_2" model="barge.load.agent">
+        <field name="partner_id">22</field>
+    </record>
+    <record id="agent_3" model="barge.load.agent">
+        <field name="partner_id">23</field>
+    </record>
+
+    <record id="agent_4" model="barge.load.agent">
+        <field name="partner_id">24</field>
+    </record>
+
+    <record id="agent_5" model="barge.load.agent">
+        <field name="partner_id">25</field>
+    </record>
+
+    <record id="agent_6" model="barge.load.agent">
+        <field name="partner_id">26</field>
+    </record>
+
+
     <!-- Barge -->
 
     <record id="barge_1" model="barge.load.barge">
