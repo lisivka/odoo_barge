@@ -1,0 +1,12 @@
+Changelog
+=========
+
+Version 1.0.0
+-------------
+* Created user groups with detailed access control for Administrators, Managers, and Agents.
+* Defined custom models for Acts, Barges, Tugboats, Agents, Quarries, and Dredgers.
+* Introduced barge load act records with the ability to assign agents.
+* Developed wizards for bulk updates of barge load acts and generating printable reports.
+* Added multiple views for barge load acts, including kanban, calendar, and pivot.
+* Provided demo data for initial testing of barge load records.
+
