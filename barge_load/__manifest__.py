@@ -17,14 +17,18 @@
     },
 
     'data': [
+        # 'security/barge_load_group.xml',
+        # 'security/barge_load_security.xml',
         'security/ir.model.access.csv',
         'views/barge_load_quarry_views.xml',
         'views/barge_load_barge_views.xml',
         'views/barge_load_dredger_views.xml',
         'views/barge_load_tugboat_views.xml',
         'views/barge_load_act_views.xml',
+        'views/barge_load_agent_views.xml',
 
         'wizards/mass_update_doctor_wizard_views.xml',
+        'reports/barge_load_report.xml',
 
         'views/barge_load_menu.xml',  # Завантажується останнім
     ],
