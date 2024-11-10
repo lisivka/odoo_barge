@@ -10,3 +10,5 @@ access_mass_update_act_wizard,mass.update.act.wizard,model_mass_update_act_wizar
 access_act_agent,access_act_agent,model_barge_load_act,barge_load.group_agent,1,1,1,0
 access_act_manager,access_act_manager,model_barge_load_act,barge_load.group_manager,1,1,1,0
 access_act_administrator,access_act_administrator,model_barge_load_act,barge_load.group_admin,1,1,1,1
+
+access_barge_load_tugboat_agent,access_barge_load_tugboat_agent,model_barge_load_tugboat,barge_load.group_agent,1,1,1,1

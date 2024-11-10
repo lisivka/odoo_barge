@@ -1,1 +1,1 @@
-from . import mass_update_doctor_wizard
+from . import mass_update_act_wizard

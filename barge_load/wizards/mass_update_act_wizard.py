@@ -1,7 +1,8 @@
 import logging
-from odoo import models, fields, api
+from odoo import models, fields
 
 _logger = logging.getLogger(__name__)
+
 
 class MassUpdateActWizard(models.TransientModel):
     _name = 'mass.update.act.wizard'
@@ -10,10 +11,9 @@ class MassUpdateActWizard(models.TransientModel):
     # Поле для вибору нового статусу
     new_status = fields.Selection(
         selection=[
-            ('draft', 'Draft'),
-            ('done', 'Done'),
+            ('draft', 'Draft '),
+            ('done', 'Done '),
         ],
-        string="New Status",
         required=True
     )
 

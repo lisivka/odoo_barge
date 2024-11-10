@@ -1,5 +1,5 @@
 <odoo>
-    <data>
+<!--    <data>-->
         <!-- Головне меню -->
         <menuitem id="lb_main_menu"
                   web_icon="barge_load,static/description/icon.png"
@@ -29,5 +29,5 @@
                   parent="lb_main_menu"
                   sequence="50" action="action_agent"/>
 
-    </data>
+<!--    </data>-->
 </odoo>

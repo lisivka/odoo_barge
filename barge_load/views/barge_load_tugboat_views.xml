@@ -4,7 +4,7 @@
         <field name="name">barge.load.tugboat.tree</field>
         <field name="model">barge.load.tugboat</field>
         <field name="arch" type="xml">
-            <tree string="tugboat">
+            <tree>
                 <field name="name"/>
                 <field name="owner_id" required="1"/>
             </tree>

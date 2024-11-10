@@ -4,7 +4,7 @@
         <field name="name">barge.load.barge.tree</field>
         <field name="model">barge.load.barge</field>
         <field name="arch" type="xml">
-            <tree string="Barges">
+            <tree>
                 <field name="name"/>
                 <field name="owner_id" required="1"/>
             </tree>

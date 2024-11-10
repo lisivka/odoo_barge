@@ -1,6 +1,6 @@
 import logging
 
-from odoo import models, fields, api
+from odoo import models, fields
 
 _logger = logging.getLogger(__name__)
 
@@ -18,5 +18,5 @@ class Barge(models.Model):
         digits=(7, 3),
     )
     act_ids = fields.One2many('barge.load.act',
-                                'quarry_id',
-                                )
+                              'quarry_id',
+                              )

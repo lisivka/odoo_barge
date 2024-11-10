@@ -4,7 +4,6 @@ from datetime import datetime, timedelta
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
-
 _logger = logging.getLogger(__name__)
 
 
@@ -23,7 +22,7 @@ class BargeLoadingAct(models.Model):
                                   tracking=True)
 
     dredger_agent_id = fields.Many2one('barge.load.agent', copy=False,
-                                        tracking=True)
+                                       tracking=True)
     tugboat_agent_id = fields.Many2one('barge.load.agent', copy=False,
                                        tracking=True)
 
@@ -192,13 +191,14 @@ class BargeLoadingAct(models.Model):
     def _compute_calculated_weight(self):
         for record in self:
             if record.draft_difference and record.cargo_capacity_per_cm:
-                record.calculated_weight = record.draft_difference * record.cargo_capacity_per_cm
+                record.calculated_weight = (record.draft_difference *
+                                            record.cargo_capacity_per_cm)
 
     @api.depends('calculated_weight', 'moisture_coefficient')
     def _compute_record_weight(self):
         for record in self:
-            record.record_weight = record.calculated_weight * (
-                    1 - record.moisture_coefficient / 100)
+            record.record_weight = (record.calculated_weight *
+                                    (1 - record.moisture_coefficient / 100))
 
     @api.model
     def write(self, vals):
@@ -228,14 +228,14 @@ class BargeLoadingAct(models.Model):
     @api.depends('date')
     def _compute_dates(self):
         for record in self:
-            record.last_7_days_date = (
-                    datetime.now() - timedelta(days=7)).date()
-            record.last_30_days_date = (
-                    datetime.now() - timedelta(days=30)).date()
+            record.last_7_days_date = (datetime.now() -
+                                       timedelta(days=7)).date()
+            record.last_30_days_date = (datetime.now() -
+                                        timedelta(days=30)).date()
 
     @api.model
-    def default_get(self, fields):
-        res = super(BargeLoadingAct, self).default_get(fields)
+    def default_get(self, field_names):
+        res = super(BargeLoadingAct, self).default_get(field_names)
         return res
 
     def print_barge_load_act_report(self):

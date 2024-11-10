@@ -17,9 +17,10 @@ class Agent(models.Model):
     # Додаємо поле, яке пов'язує особу з користувачем
     user_id = fields.Many2one('res.users',
                               help="The user linked to this person.")
+
     #
     @api.depends('partner_id')
     def _compute_name(self):
         for record in self:
-            record.name = record.partner_id.name if record.partner_id else "Unnamed Agent"
-#
+            record.name = record.partner_id.name \
+                if record.partner_id else "Unnamed Agent"

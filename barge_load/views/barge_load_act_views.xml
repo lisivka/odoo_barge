@@ -5,7 +5,7 @@
         <field name="model">barge.load.act</field>
         <field name="arch" type="xml">
 
-            <tree string="Barges" decoration-success="status == 'done'" decoration-warning="status == 'draft'">
+            <tree decoration-success="status == 'done'" decoration-warning="status == 'draft'">
 
                 <field name="number"/>
                 <field name="date"/>
